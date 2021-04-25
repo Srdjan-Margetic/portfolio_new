@@ -32,14 +32,14 @@
       .wraper_landing_page_layer-1 .content_landing_page .content_top, .wraper_landing_page_layer-2 .content_landing_page .content_top {
         margin: auto; }
         .wraper_landing_page_layer-1 .content_landing_page .content_top p, .wraper_landing_page_layer-2 .content_landing_page .content_top p {
-          font-size: 18px;
+          font-size: 24px;
           letter-spacing: 4px; }
       .wraper_landing_page_layer-1 .content_landing_page .main_title, .wraper_landing_page_layer-2 .content_landing_page .main_title {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 64px;
+        font-size: 70px;
         letter-spacing: 10px; }
       .wraper_landing_page_layer-1 .content_landing_page .content_bottom, .wraper_landing_page_layer-2 .content_landing_page .content_bottom {
         position: relative;
@@ -68,6 +68,8 @@
         border-radius: 50%;
         height: 100px;
         width: 100px; }
+        .wraper_landing_page_layer-1 .content_landing_page .click_me:hover, .wraper_landing_page_layer-2 .content_landing_page .click_me:hover {
+          border-color: royalblue; }
         .wraper_landing_page_layer-1 .content_landing_page .click_me p, .wraper_landing_page_layer-2 .content_landing_page .click_me p {
           font-size: 18px;
           letter-spacing: 4px;
@@ -83,10 +85,9 @@
     top: 100px;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    transition: 0.1s; }
+    transition: 0.1s;
+    z-index: 2; }
   .wraper .cursor_2 {
-    z-index: 1;
     position: absolute;
     width: 5px;
     height: 5px;
@@ -95,7 +96,8 @@
     left: 100px;
     top: 100px;
     pointer-events: none;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 2; }
 
 .wraper_landing_page_layer-1 {
   background: url(../img/back-1.jpg) no-repeat center fixed;
@@ -104,7 +106,7 @@
   clip-path: circle(60px at var(--x) var(--y));
   opacity: 0.4;
   transition: 0.1s;
-  transition: clip-path 0.1s ease-in-out;
+  transition: clip-path 0.1s;
   z-index: 1; }
 
 .wraper_landing_page_layer-2 {

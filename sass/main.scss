@@ -6,6 +6,10 @@
   font-family: "Cormorant Garamond", serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .wraper {
   position: relative;
   width: 100vw;
@@ -37,8 +41,74 @@
       .content_top {
         margin: auto;
 
+        .main_animation {
+          margin: auto;
+          perspective: 100rem;
+          perspective-origin: 50% 50%;
+
+          .cube {
+            transform-style: preserve-3d;
+            width: 20rem;
+            height: 20rem;
+            margin: auto;
+            position: relative;
+            color: $color-turquoise;
+            animation: loop 10s linear infinite;
+
+            p {
+              position: absolute;
+              opacity: 0.8;
+              display: block;
+              width: 20rem;
+              height: 20rem;
+              font-size: 2.6rem;
+              border: 1px solid $color-turquoise;
+
+              span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+
+            p:nth-child(1) {
+              transform: rotateY(0deg) translateZ(100px);
+            }
+
+            p:nth-child(2) {
+              transform: rotateY(90deg) translateZ(100px);
+            }
+
+            p:nth-child(3) {
+              transform: rotateY(180deg) translateZ(100px);
+            }
+
+            p:nth-child(4) {
+              transform: rotateY(-90deg) translateZ(100px);
+            }
+
+            p:nth-child(5) {
+              transform: rotateX(90deg) translateZ(100px);
+            }
+
+            p:nth-child(6) {
+              transform: rotateX(-90deg) translateZ(100px);
+            }
+
+            @keyframes loop {
+              from {
+                transform: rotateX(0deg) rotateY(0deg);
+              }
+              to {
+                transform: rotateX(360deg) rotateY(360deg);
+              }
+            }
+          }
+        }
+
         p {
-          font-size: 18px;
+          font-size: 24px;
           letter-spacing: 4px;
         }
       }
@@ -48,7 +118,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 64px;
+        font-size: 70px;
         letter-spacing: 10px;
       }
 
@@ -87,6 +157,10 @@
         height: 100px;
         width: 100px;
 
+        &:hover {
+          border-color: royalblue;
+        }
+
         p {
           font-size: 18px;
           letter-spacing: 4px;
@@ -107,12 +181,11 @@
     top: 100px;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 1;
     transition: 0.1s;
+    z-index: 2;
   }
 
   .cursor_2 {
-    z-index: 1;
     position: absolute;
     width: 5px;
     height: 5px;
@@ -122,6 +195,7 @@
     top: 100px;
     pointer-events: none;
     transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }
 
@@ -133,7 +207,7 @@
     clip-path: circle(60px at var(--x) var(--y));
     opacity: 0.4;
     transition: 0.1s;
-    transition: clip-path 0.1s ease-in-out;
+    transition: clip-path 0.1s;
     z-index: 1;
   }
   &_landing_page_layer-2 {
