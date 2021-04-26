@@ -37,32 +37,38 @@ html {
       max-width: 1440px;
       width: 100%;
       z-index: 2;
+      overflow: hidden;
 
       .content_top {
-        margin: auto;
+        margin-top: 12rem;
+        height: 20rem;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .main_animation {
-          margin: auto;
-          perspective: 100rem;
+          margin-bottom: 20px;
+          perspective: 50rem;
           perspective-origin: 50% 50%;
 
           .cube {
             transform-style: preserve-3d;
-            width: 20rem;
-            height: 20rem;
+            width: 8rem;
+            height: 8rem;
             margin: auto;
             position: relative;
-            color: $color-turquoise;
+            color: gray;
             animation: loop 10s linear infinite;
 
             p {
               position: absolute;
               opacity: 0.8;
               display: block;
-              width: 20rem;
-              height: 20rem;
-              font-size: 2.6rem;
-              border: 1px solid $color-turquoise;
+              width: 8rem;
+              height: 8rem;
+              font-size: 1.4rem;
+              border: 1px solid gray;
 
               span {
                 position: absolute;
@@ -73,27 +79,27 @@ html {
             }
 
             p:nth-child(1) {
-              transform: rotateY(0deg) translateZ(100px);
+              transform: rotateY(0deg) translateZ(40px);
             }
 
             p:nth-child(2) {
-              transform: rotateY(90deg) translateZ(100px);
+              transform: rotateY(90deg) translateZ(40px);
             }
 
             p:nth-child(3) {
-              transform: rotateY(180deg) translateZ(100px);
+              transform: rotateY(180deg) translateZ(40px);
             }
 
             p:nth-child(4) {
-              transform: rotateY(-90deg) translateZ(100px);
+              transform: rotateY(-90deg) translateZ(40px);
             }
 
             p:nth-child(5) {
-              transform: rotateX(90deg) translateZ(100px);
+              transform: rotateX(90deg) translateZ(40px);
             }
 
             p:nth-child(6) {
-              transform: rotateX(-90deg) translateZ(100px);
+              transform: rotateX(-90deg) translateZ(40px);
             }
 
             @keyframes loop {
@@ -110,6 +116,7 @@ html {
         p {
           font-size: 24px;
           letter-spacing: 4px;
+          padding-top: 4rem;
         }
       }
 
@@ -120,6 +127,7 @@ html {
         transform: translate(-50%, -50%);
         font-size: 70px;
         letter-spacing: 10px;
+        padding: 20px 0;
       }
 
       .content_bottom {

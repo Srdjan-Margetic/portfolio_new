@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Cormorant Garamond", serif; }
 
+html {
+  font-size: 62.5%; }
+
 .wraper {
   position: relative;
   width: 100vw;
@@ -28,19 +31,70 @@
       margin: 0 auto;
       max-width: 1440px;
       width: 100%;
-      z-index: 2; }
+      z-index: 2;
+      overflow: hidden; }
       .wraper_landing_page_layer-1 .content_landing_page .content_top, .wraper_landing_page_layer-2 .content_landing_page .content_top {
-        margin: auto; }
+        margin-top: 12rem;
+        height: 20rem;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation, .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation {
+          margin-bottom: 20px;
+          perspective: 50rem;
+          perspective-origin: 50% 50%; }
+          .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube, .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube {
+            transform-style: preserve-3d;
+            width: 8rem;
+            height: 8rem;
+            margin: auto;
+            position: relative;
+            color: gray;
+            animation: loop 10s linear infinite; }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p, .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p {
+              position: absolute;
+              opacity: 0.8;
+              display: block;
+              width: 8rem;
+              height: 8rem;
+              font-size: 1.4rem;
+              border: 1px solid gray; }
+              .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p span, .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(1), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(1) {
+              transform: rotateY(0deg) translateZ(40px); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(2), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(2) {
+              transform: rotateY(90deg) translateZ(40px); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(3), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(3) {
+              transform: rotateY(180deg) translateZ(40px); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(4), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(4) {
+              transform: rotateY(-90deg) translateZ(40px); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(5), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(5) {
+              transform: rotateX(90deg) translateZ(40px); }
+            .wraper_landing_page_layer-1 .content_landing_page .content_top .main_animation .cube p:nth-child(6), .wraper_landing_page_layer-2 .content_landing_page .content_top .main_animation .cube p:nth-child(6) {
+              transform: rotateX(-90deg) translateZ(40px); }
+
+@keyframes loop {
+  from {
+    transform: rotateX(0deg) rotateY(0deg); }
+  to {
+    transform: rotateX(360deg) rotateY(360deg); } }
         .wraper_landing_page_layer-1 .content_landing_page .content_top p, .wraper_landing_page_layer-2 .content_landing_page .content_top p {
           font-size: 24px;
-          letter-spacing: 4px; }
+          letter-spacing: 4px;
+          padding-top: 4rem; }
       .wraper_landing_page_layer-1 .content_landing_page .main_title, .wraper_landing_page_layer-2 .content_landing_page .main_title {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 70px;
-        letter-spacing: 10px; }
+        letter-spacing: 10px;
+        padding: 20px 0; }
       .wraper_landing_page_layer-1 .content_landing_page .content_bottom, .wraper_landing_page_layer-2 .content_landing_page .content_bottom {
         position: relative;
         margin-top: auto;
