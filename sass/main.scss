@@ -1,14 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Cormorant Garamond", serif;
-}
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-html {
-  font-size: 62.5%;
-}
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "components/button";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/projects";
+@import "pages/contact";
 
 .wraper {
   position: relative;
